@@ -39,10 +39,14 @@ h1 span{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-c
 .card p{margin:0;color:var(--mute);font-size:14px;line-height:1.4;flex:1}
 @media(min-width:560px){.card h3{font-size:20px}.card p{font-size:15px}}
 .play{align-self:flex-start;margin-top:8px;font-weight:800;color:var(--bg);background:var(--a);padding:9px 16px;border-radius:999px;font-size:15px}
-.card:nth-child(2) .play{background:var(--c)}
-.card:nth-child(3) .play{background:var(--b);color:#fff}
-.card:nth-child(4) .play{background:#9be15d}
-.card:nth-child(5) .play{background:#7fb2ff}
+.play.p-pink{background:var(--b);color:#fff}
+.play.p-teal{background:var(--c)}
+.play.p-gold{background:#ffb347}
+.play.p-green{background:#9be15d}
+.play.p-blue{background:#7fb2ff}
+.card{position:relative}
+.tag-abandoned{position:absolute;top:10px;left:10px;z-index:2;background:#e5484d;color:#fff;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:8px;box-shadow:0 3px 10px #0008;border:2px solid #fff}
+.card.abandoned .shot{filter:grayscale(.6) brightness(.8)}
 footer{text-align:center;color:var(--mute);font-size:14px;margin-top:34px}
 @media(prefers-reduced-motion:reduce){.card{transition:none}}
 </style>
@@ -69,25 +73,30 @@ footer{text-align:center;color:var(--mute);font-size:14px;margin-top:34px}
   <section class="games" id="games">
     <h2>My games</h2>
     <div class="grid">
+      <a class="card" href="https://4nqyxkp.sharehtml.org/">
+        <img class="shot" src="img/benny.jpg" alt="Screenshot of Benny and the Jets on a phone" width="640" height="800" loading="lazy">
+        <div class="body"><h3>Benny and the Jets</h3><p>An Elton John side-scroller. Tap to jump, land on jets, and grab the glasses.</p><span class="play p-pink">Play ▶</span></div>
+      </a>
       <a class="card" href="https://secretlabcoat.github.io/psychotic-escape/?v=k12">
         <img class="shot" src="img/psychotic.jpg" alt="Screenshot of Psychotic! The Escape on a phone" width="640" height="800" loading="lazy">
-        <div class="body"><h3>Psychotic! The Escape</h3><p>A classic black-and-white Mac adventure, rebuilt so you can play it on your iPhone.</p><span class="play">Play ▶</span></div>
+        <div class="body"><h3>Psychotic! The Escape</h3><p>A classic black-and-white Mac adventure, rebuilt so you can play it on your iPhone.</p><span class="play p-yellow">Play ▶</span></div>
       </a>
       <a class="card" href="https://caption-meme-game.netlify.app/">
         <img class="shot" src="img/caption-meme.jpg" alt="Screenshot of Caption Meme on a phone" width="640" height="800" loading="lazy">
-        <div class="body"><h3>Caption Meme</h3><p>Party game for phones. Everyone gets the same photo, writes the funniest caption, votes, and scores.</p><span class="play">Play ▶</span></div>
+        <div class="body"><h3>Caption Meme</h3><p>Party game for phones. Everyone gets the same photo, writes the funniest caption, votes, and scores.</p><span class="play p-teal">Play ▶</span></div>
       </a>
-      <a class="card" href="https://4nqyxkp.sharehtml.org/">
-        <img class="shot" src="img/benny.jpg" alt="Screenshot of Benny and the Jets on a phone" width="640" height="800" loading="lazy">
-        <div class="body"><h3>Benny and the Jets</h3><p>An Elton John side-scroller. Tap to jump, land on jets, and grab the glasses.</p><span class="play">Play ▶</span></div>
+      <a class="card" href="https://e7wm2xv.sharehtml.org/">
+        <img class="shot" src="img/light-duty.jpg" alt="Screenshot of Light Duty on a phone" width="640" height="800" loading="lazy">
+        <div class="body"><h3>Light Duty</h3><p>An after-dark arcade mystery. Flip each window's lights ON or OFF to keep the courtyard residents happy.</p><span class="play p-gold">Play ▶</span></div>
       </a>
-      <a class="card" href="https://k09mycl.sharehtml.org/">
+      <a class="card abandoned" href="https://k09mycl.sharehtml.org/">
+        <span class="tag-abandoned">Abandoned</span>
         <img class="shot" src="img/ai-pacino.jpg" alt="Screenshot of AI Pacino's Any Given Sundae on a phone" width="640" height="800" loading="lazy">
-        <div class="body"><h3>AI Pacino's Any Given Sundae</h3><p>A football parody. Coach Al wants 80 yards with four sundae plays. Scoop. Catch. Pour.</p><span class="play">Play ▶</span></div>
+        <div class="body"><h3>AI Pacino's Any Given Sundae</h3><p><b style="color:#ff8a8d">Abandoned (unfinished).</b> A football parody. Coach Al wants 80 yards with four sundae plays. Scoop. Catch. Pour.</p><span class="play p-green">Play ▶</span></div>
       </a>
       <a class="card" href="https://autumn-cobalt-amber-blaze.grok.me/">
         <img class="shot" src="img/peopleteam.jpg" alt="Screenshot of the Peopleteam Group Inc. site on a phone" width="640" height="800" loading="lazy">
-        <div class="body"><h3>Peopleteam Group Inc.</h3><p>A spoof corporate site: "the place where the products choose you."</p><span class="play">Visit ▶</span></div>
+        <div class="body"><h3>Peopleteam Group Inc.</h3><p>A spoof corporate site: "the place where the products choose you."</p><span class="play p-blue">Visit ▶</span></div>
       </a>
     </div>
   </section>
